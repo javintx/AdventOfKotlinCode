@@ -2,6 +2,7 @@ fun main() {
 
     fun part1(input: List<String>): Int {
         return input
+            .asSequence()
             .map { it.toInt() }
             .windowed(2)
             .count { it.last() > it.first() }
@@ -9,6 +10,7 @@ fun main() {
 
     fun part2(input: List<String>): Int {
         return input
+            .asSequence()
             .map { it.toInt() }
             .windowed(3)
             .map { it.sum() }
